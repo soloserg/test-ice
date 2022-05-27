@@ -1,0 +1,95 @@
+.hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 116px 61px 120px 59px;
+  background-color: var(--secondary-bg-color);
+  background-image: 
+  linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+  url(../hero-img/hero-Img-mob.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../hero-img/hero-Img-mob-2x.jpeg);
+    }
+    
+  @include tablet {
+  padding: 118px 0;
+  background-image: 
+  linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+  url(../hero-img/hero-Img-tab.jpeg);
+  
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../hero-img/hero-Img-tab-2x.jpeg);
+    }
+  }
+
+  @include desktop {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: 
+  linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), 
+  url(../hero-img/hero-Img.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../hero-img/hero-Img-2x.png);
+    }
+    }
+        }
+
+.hero-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.hero-container__title {
+  color: var(--primary-white-color);
+  font-weight: 900;
+  font-size: 26px;
+    line-height: 1.61;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  
+  max-width: 360px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  text-align: center;
+  @include desktop {
+  font-size: 44px;
+  line-height: 1.36;
+  max-width: 696px;
+  }
+}
+
+.hero-container__button {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+  height: 50px;
+  min-width: 200px;
+
+  transition: background-color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--second-accent-color);
+  }
+}
+
+

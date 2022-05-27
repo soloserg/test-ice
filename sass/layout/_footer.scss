@@ -1,0 +1,223 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2f303a;
+}
+
+.container-footer {
+@include desktop {
+display: flex;
+    align-items: baseline;
+}
+}
+
+.contacts-content {
+    text-align: left;
+    justify-content: space-around;
+    margin-bottom: 60px;
+    @include tablet {
+display: flex;
+    }
+        @include desktop {
+            margin-bottom: 0;
+        }
+}
+
+.footer-contacts {
+    margin-bottom: 70px;
+    @include tablet {
+        margin-bottom: 0;
+    }
+    @include desktop {
+margin-right: 70px;
+    }
+}
+
+.logo.logo-footer {
+    text-align: center;
+    display: block;
+    @include desktop {
+            text-align: left;
+        }
+}
+
+.contacts-address {
+    margin-top: 20px;
+}
+
+.contacts-list {
+    text-align: center;
+    @include desktop {
+        text-align: left;
+    }
+}
+
+.contacts-list__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.contacts-list__map {
+    color: var(--primary-white-color);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.contacts-list__mail {
+    margin-bottom: 9px;
+    color: var(--white-alpha-color);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.contacts-list__tel {
+    margin-left: 0;
+    color: var(--white-alpha-color);
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+}
+
+.footer-soc__title {
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    text-align: center;
+    @include desktop {
+margin-top: revert;
+    }
+}
+
+.footer-soc__list {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-soc__item+.footer-soc__item {
+    margin-left: 10px;
+}
+
+.footer-soc__link {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms var(--timing-function);
+&:hover,
+&:focus {
+    background-color: var(--accent-color);
+}
+}
+
+.footer-soc__icon {
+    fill: var(--primary-white-color);
+}
+
+.footer-email {
+    text-align: center;
+    @include desktop {
+            margin-left: 93px;
+        }
+}
+
+.footer-email__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    margin-bottom: 20px;
+}
+
+.footer-form {
+    @include desktop {
+display: flex;
+    }
+    
+}
+
+.footer-form__input {
+    @media screen and (max-width: 479px) {
+       width: 90vw; 
+    } 
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding-left: 16px;
+   
+    color: var(--primary-icon-color);
+    margin-bottom: 20px;
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.25;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+        @include desktop {
+        margin-right: 12px;
+    }
+}
+
+.footer-form__button {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    height: 50px;
+    min-width: 200px;
+    padding: 10px 10px 10px 29px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    transition: background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--second-accent-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.footer-form__icon {
+    fill: var(--primary-white-color);
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: fill 250ms var(--timing-function);
+    .footer-form__button:hover,
+    .footer-form__button:focus & {
+        fill: var(--primary-white-color);
+    }
+}
+

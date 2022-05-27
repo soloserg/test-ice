@@ -1,0 +1,17 @@
+.logo {
+    color: var(--accent-color);
+    font-family: Raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    .accent__header {
+        color: var(--title-text-color);
+    }
+}
+
+.logo .accent__footer {
+    color: var(--primary-white-color);
+}

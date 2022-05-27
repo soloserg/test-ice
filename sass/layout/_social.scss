@@ -1,0 +1,32 @@
+.soc {
+    display: flex;
+    justify-content: center;
+}
+
+.soc__item+.soc__item {
+    margin-left: 10px;
+}
+
+.soc__link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.soc__icon {
+    fill: var(--primary-icon-color);
+    transition: fill 250ms var(--timing-function);
+    .soc__link:hover & {
+        fill: var(--primary-white-color);
+    }
+}
+
